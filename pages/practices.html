@@ -1,124 +1,291 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тренировки - Футболист Басиев Руслан</title>
-    <link rel="stylesheet" href="../style.css" />
-  </head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Переключатель темы -->
+    <button class="btn btn-outline-secondary theme-toggle" id="themeToggle">
+        <i class="bi bi-moon"></i>
+    </button>
 
-  <body class="page-container">
-    <header>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="practices.html">Тренировки</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="goods.html">Экипировка</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h1 class="h3 mb-1">Басиев Руслан</h1>
+                    <p class="mb-0 opacity-75">Тренировки</p>
+                </div>
+                <div class="col-auto">
+                    <span class="badge bg-light text-primary">Программа</span>
+                </div>
+            </div>
+        </div>
     </header>
-    <main class="content">
-      <h2 class="section-title">Программа тренировок</h2>
-      <div class="practices-container">
-        <article class="practice-card">
-          <h3 class="practice-title">Техническая подготовка защитника</h3>
-          <p class="practice-desc">
-            Ежедневные тренировки с мячом: отбор мяча, игра головой, точные
-            передачи, контроль мяча под давлением. Особое внимание уделяется
-            технике tackles и позиционной игре.
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3 class="practice-title">Физическая подготовка</h3>
-          <p class="practice-desc">
-            Силовые тренировки 3 раза в неделю с акцентом на ноги и корпус,
-            работа на взрывную скорость, прыжковые упражнения для игры головой.
-            Индивидуальная программа разработана с учетом позиции центрального
-            защитника.
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3 class="practice-title">Тактическая подготовка</h3>
-          <p class="practice-desc">
-            Изучение игровых схем, построение линии обороны, организация
-            офсайдной ловушки, взаимодействие с партнерами по защите. Анализ
-            видеоматериалов с разбором действий против нападающих разного типа.
-          </p>
-        </article>
-        <article class="practice-card">
-          <h3 class="practice-title">Восстановление</h3>
-          <p class="practice-desc">
-            Бассейн, сауна, спортивный массаж, стретчинг. Особое внимание
-            уделяется восстановлению после силовых нагрузок и ускорению
-            регенерации мышц.
-          </p>
-        </article>
-      </div>
 
-      <div class="training-schedule">
-        <h3 class="section-title">Расписание тренировок на неделю</h3>
-        <div class="schedule-grid">
-          <div class="day-card">
-            <h4>Понедельник</h4>
-            <p>Утро: Силовая тренировка</p>
-            <p>Вечер: Техника защиты</p>
-          </div>
-          <div class="day-card">
-            <h4>Вторник</h4>
-            <p>Утро: Кардио + спринты</p>
-            <p>Вечер: Тактическая подготовка</p>
-          </div>
-          <div class="day-card">
-            <h4>Среда</h4>
-            <p>Утро: Восстановление</p>
-            <p>Вечер: Игровая практика</p>
-          </div>
-          <div class="day-card">
-            <h4>Четверг</h4>
-            <p>Утро: Силовая тренировка</p>
-            <p>Вечер: Игра головой</p>
-          </div>
-          <div class="day-card">
-            <h4>Пятница</h4>
-            <p>Утро: Легкое кардио</p>
-            <p>Вечер: Командная тактика</p>
-          </div>
-          <div class="day-card">
-            <h4>Суббота</h4>
-            <p>Утро: Матч/Контрольная игра</p>
-            <p>Вечер: Восстановление</p>
-          </div>
-          <div class="day-card">
-            <h4>Воскресенье</h4>
-            <p>Выходной/Активное восстановление</p>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">
+                            <i class="bi bi-newspaper me-1"></i>Новости
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="practices.html">
+                            <i class="bi bi-activity me-1"></i>Тренировки
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goods.html">
+                            <i class="bi bi-cart me-1"></i>Экипировка
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-telephone me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        <h2 class="h4 mb-4">Программа тренировок</h2>
+        
+        <div class="row g-4 mb-5">
+            <!-- Тренировка 1 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Техническая подготовка защитника</h5>
+                        <p class="card-text">
+                            Ежедневные тренировки с мячом: отбор мяча, игра головой, точные
+                            передачи, контроль мяча под давлением. Особое внимание уделяется
+                            технике tackles и позиционной игре.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тренировка 2 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Физическая подготовка</h5>
+                        <p class="card-text">
+                            Силовые тренировки 3 раза в неделю с акцентом на ноги и корпус,
+                            работа на взрывную скорость, прыжковые упражнения для игры головой.
+                            Индивидуальная программа разработана с учетом позиции центрального
+                            защитника.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тренировка 3 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Тактическая подготовка</h5>
+                        <p class="card-text">
+                            Изучение игровых схем, построение линии обороны, организация
+                            офсайдной ловушки, взаимодействие с партнерами по защите. Анализ
+                            видеоматериалов с разбором действий против нападающих разного типа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Тренировка 4 -->
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Восстановление</h5>
+                        <p class="card-text">
+                            Бассейн, сауна, спортивный массаж, стретчинг. Особое внимание
+                            уделяется восстановлению после силовых нагрузок и ускорению
+                            регенерации мышц.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Расписание -->
+        <h3 class="h4 mb-4">Расписание тренировок на неделю</h3>
+        <div class="row g-3">
+            <!-- Понедельник -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Понедельник</h5>
+                        <p class="card-text mb-1">Утро: Силовая тренировка</p>
+                        <p class="card-text">Вечер: Техника защиты</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вторник -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Вторник</h5>
+                        <p class="card-text mb-1">Утро: Кардио + спринты</p>
+                        <p class="card-text">Вечер: Тактическая подготовка</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Среда -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Среда</h5>
+                        <p class="card-text mb-1">Утро: Восстановление</p>
+                        <p class="card-text">Вечер: Игровая практика</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Четверг -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Четверг</h5>
+                        <p class="card-text mb-1">Утро: Силовая тренировка</p>
+                        <p class="card-text">Вечер: Игра головой</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пятница -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Пятница</h5>
+                        <p class="card-text mb-1">Утро: Легкое кардио</p>
+                        <p class="card-text">Вечер: Командная тактика</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Суббота -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Суббота</h5>
+                        <p class="card-text mb-1">Утро: Матч/Контрольная игра</p>
+                        <p class="card-text">Вечер: Восстановление</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Воскресенье -->
+            <div class="col-12">
+                <div class="card shadow-sm text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Воскресенье</h5>
+                        <p class="card-text">Выходной/Активное восстановление</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>
-          © 2024 Руслан Басиев. Профессиональный футболист, защитник. Все права
-          защищены.
-        </p>
-        <div class="social-links">
-          <a href="#" class="social-link">Instagram</a>
-          <a href="#" class="social-link">VK</a>
-          <a href="#" class="social-link">Telegram</a>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2024 Руслан Басиев. Профессиональный футболист. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                    <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
-  </body>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Проверяем сохраненную тему
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.body.classList.toggle('dark-theme', currentTheme === 'dark');
+        updateThemeIcon();
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon();
+        });
+        
+        function updateThemeIcon() {
+            const isDark = document.body.classList.contains('dark-theme');
+            themeIcon.className = isDark ? 'bi bi-sun' : 'bi bi-moon';
+            themeToggle.classList.toggle('btn-outline-secondary', !isDark);
+            themeToggle.classList.toggle('btn-outline-warning', isDark);
+        }
+        
+        // Темные стили
+        const style = document.createElement('style');
+        style.textContent = `
+            .dark-theme {
+                background-color: #1a1a1a;
+                color: #ffffff;
+            }
+            .dark-theme .bg-light {
+                background-color: #2d2d2d !important;
+                color: #ffffff;
+            }
+            .dark-theme .card {
+                background-color: #2d2d2d;
+                color: #ffffff;
+                border-color: #444;
+            }
+            .dark-theme .text-muted {
+                color: #aaa !important;
+            }
+            .dark-theme .text-primary {
+                color: #4dabf7 !important;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
 </html>
